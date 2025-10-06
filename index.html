@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Study Planner</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>📚 Study Planner</h1>
+      <button id="toggle-theme">🌙</button>
+    </header>
+
+    <!-- Task Input -->
+    <div class="task-input">
+      <input type="text" id="taskName" placeholder="Enter study task...">
+      <input type="date" id="taskDeadline">
+      <button id="addTask">➕ Add Task</button>
+    </div>
+
+    <!-- Search & Filter -->
+    <div class="controls">
+      <input type="text" id="searchTask" placeholder="🔍 Search tasks...">
+      <select id="filterTask">
+        <option value="all">All</option>
+        <option value="pending">Pending</option>
+        <option value="completed">Completed</option>
+      </select>
+    </div>
+
+    <!-- Progress -->
+    <div class="progress-container">
+      <p>Progress</p>
+      <div class="progress-bar">
+        <div class="progress" id="progress"></div>
+      </div>
+      <p id="progressText">0% Completed</p>
+    </div>
+
+    <!-- Task List -->
+    <ul id="taskList"></ul>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
