@@ -1,0 +1,126 @@
+/* General Styling */
+body {
+    font-family: "Poppins", sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    margin: 0;
+    padding: 0;
+    transition: background 0.3s, color 0.3s;
+  }
+  
+  :root {
+    --bg: #f4f6f9;
+    --text: #333;
+    --card: #fff;
+    --accent: #4CAF50;
+  }
+  
+  .dark {
+    --bg: #1e1e1e;
+    --text: #f5f5f5;
+    --card: #2c2c2c;
+    --accent: #ff9800;
+  }
+  
+  .container {
+    max-width: 700px;
+    margin: 2rem auto;
+    padding: 20px;
+    background: var(--card);
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  }
+  
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  h1 {
+    margin: 0;
+  }
+  
+  button {
+    background: var(--accent);
+    color: white;
+    border: none;
+    padding: 8px 14px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.2s;
+  }
+  
+  button:hover {
+    opacity: 0.9;
+  }
+  
+  .task-input, .controls {
+    display: flex;
+    gap: 10px;
+    margin: 15px 0;
+  }
+  
+  input, select {
+    flex: 1;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+  }
+  
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  li {
+    background: var(--card);
+    margin: 10px 0;
+    padding: 12px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-left: 6px solid var(--accent);
+    transition: 0.3s;
+  }
+  
+  li.completed {
+    text-decoration: line-through;
+    opacity: 0.6;
+  }
+  
+  .task-info {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .deadline {
+    font-size: 12px;
+    color: gray;
+  }
+  
+  .task-actions button {
+    margin-left: 8px;
+  }
+  
+  /* Progress Bar */
+  .progress-container {
+    margin: 15px 0;
+  }
+  
+  .progress-bar {
+    background: #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    height: 14px;
+  }
+  
+  .progress {
+    background: var(--accent);
+    height: 100%;
+    width: 0%;
+    transition: width 0.3s ease-in-out;
+  }
+  
